@@ -1,7 +1,8 @@
 //model needs to be imported
 
-function loginForm (req, res) {
-    res.render("authentication/login");
+function login (req, res) {
+    // res.render("authentication/login");
+    res.render("hello")
 }
 
 async function loginVerify (req, res) {
@@ -43,7 +44,7 @@ function logout (req, res) {
 }
 
 module.exports = {
-    loginForm,
+    login,
     loginVerify,
     make,
     create,
