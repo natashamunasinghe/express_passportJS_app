@@ -4,10 +4,16 @@ const exphbs = require("express-handlebars");
 const app = express();
 const port = 3000;
 
-
+//gives access to data coming into the server in the body property
 app.use(express.urlencoded());
 app.use(express.json());
 
+
+//handlebars setup
+app.engine("handlebars", exphbs({defaultLayout: "main"}));
+app.set("view engine", "handlebars");
+
+//mongoose setup
 mongoose.connect("mongodb://localhost/auth", { useNewUrlParser: true });
 mongoose.Promise = global.Promise;
 

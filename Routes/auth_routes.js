@@ -1,6 +1,14 @@
 const express = require("express");
 const router  = express.Router();
-const DigimonController = require("./../controllers/auth_controller");
-const { celebrate, Joi } = require("celebrate");
+// const AuthController = require("../controllers/auth_controller");
+// const { celebrate, Joi } = require("celebrate");
 
-router.get("/", AuthController.index);
+// Home page route
+router.get('/', (req, res) => 
+    res.send('home page'));
+
+// Auth routes
+router.get('/login', (req, res) => 
+    res.send('home page'));
+
+module.exports = router;
